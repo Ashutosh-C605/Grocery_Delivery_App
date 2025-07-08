@@ -1,4 +1,4 @@
-import { useAppContext } from '../context/AppContext'
+import { useAppContext, setCartItems } from '../context/AppContext'
 import { useLocation } from 'react-router-dom'
 import React, { useEffect } from 'react'
 
@@ -12,6 +12,7 @@ const Loading = () => {
 
     useEffect(()=>{
         if(nextUrl){
+            setCartItems({});
             setTimeout(()=>{
                 navigate(`/${nextUrl}`)
             }, 5000)
