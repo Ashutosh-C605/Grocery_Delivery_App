@@ -19,7 +19,9 @@ const Navbar = () => {
                 toast.error(data.message)
             }
         } catch (error) {
-            toast.error(data.message)
+            // Even if logout API fails, clear local state
+            setUser(null);
+            toast.error("Logout failed, but you've been logged out locally")
         }
         
     }
