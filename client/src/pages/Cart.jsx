@@ -41,7 +41,7 @@ const Cart = () => {
     const placeOrder = async ()=>{
         try {
                 if(!selectedAddress){
-                    return toast.error("Please select and address")
+                    return toast.error("Please select an address")
                 }
 
                 //Place Order with COD
@@ -96,7 +96,7 @@ const Cart = () => {
         <div className="flex flex-col md:flex-row mt-16">
             <div className='flex-1 max-w-4xl'>
                 <h1 className="text-3xl font-medium mb-6">
-                    Shopping Cart <span className="text-sm text-primary">{getCartCount()}</span>
+                    Shopping Cart <span className="text-md text-primary">{getCartCount()}</span>
                 </h1>
 
                 <div className="grid grid-cols-[2fr_1fr_1fr] text-gray-500 text-base font-medium pb-3">
